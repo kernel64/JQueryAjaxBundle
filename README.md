@@ -23,6 +23,6 @@ This bundle add two Twig functions :
 
   To generate a link:
   
-  {{ ja_link({'update': '#reponse', 'url': path('new'), 'text': 'new link'  })|raw }}
+  {{ ja_link({'update': '#reponse', 'url': path('new'), 'text': 'new link'  }) }}
   
  

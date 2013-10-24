@@ -19,11 +19,6 @@ This bundle add two Twig functions :
 
   To generate a link:
   
-  <!--
-  
   {{ ja_link({'update': '#reponse', 'url': path('event_new'), 'text': 'new link'  })|raw }}
   
-  =>
-  
-  <a onclick="$.ajax({ url: '/app_dev.php/new', type: 'POST', dataType: 'html',success: function( data ){$( '#reponse' ).html(data);}});return false;" href="/app_dev.php/new" id="" class="">new link</a>
-  //-->
+ 

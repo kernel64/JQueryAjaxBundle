@@ -9,6 +9,10 @@ This bundle add two Twig functions :
 
   To generate a js code to send an ajax request:
   
+  {{ ja_request({'update': '#reponse', 'url': path('new')  }) }}
+  
+  or
+  
   {{ ja_request({'update': '#reponse', 'url': path('new'), 'after': 'alert("after");', 'before': 'alert("before");'  }) }}
   
   =>

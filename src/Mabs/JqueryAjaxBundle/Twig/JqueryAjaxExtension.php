@@ -12,9 +12,11 @@ class JqueryAjaxExtension extends \Twig_Extension
     			new \Twig_SimpleFunction('ja_link', $this->linkTag(), array('is_safe' => array('html')))
     	);
     }
+    
     /**
-     *  create Js function to call remote URL
+     * Generate Js function to send ajax request.
      * 
+     * @param array $options
      */
     public function remoteCall($options = array()) {
     	return function($options) {
@@ -45,6 +47,11 @@ class JqueryAjaxExtension extends \Twig_Extension
     	;
     }
     
+    /**
+     * Generate link tag with js function to send ajax request
+     * 
+     * @param array $options
+     */
     public function linkTag($options = array()) {
     	$jsRequest = $this->remoteCall();
     	
@@ -59,7 +66,6 @@ class JqueryAjaxExtension extends \Twig_Extension
     		return $html;
     	};
     }
-
 
     /**
      * Returns the name of the extension.

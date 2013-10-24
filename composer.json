@@ -3,6 +3,7 @@
     "description":  "This bundle provides a Twig functions that generate js function to send ajax request.",
     "keywords":     ["jQyuery", "ajax", "twig", "symfony"],
     "type":         "symfony-bundle",
+    "license":      "MIT",
     "authors":      [
         {
             "name":     "Mohamed Aymen Ben Slimane",

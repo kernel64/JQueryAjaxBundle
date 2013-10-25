@@ -2,6 +2,12 @@
 
 namespace Mabs\JQueryAjaxBundle\Twig;
 
+/**
+ *
+ * @author Mohamed Aymen Ben Slimane <med.aymen3@gmail.com>
+ *
+ */
+
 class JqueryAjaxExtension extends \Twig_Extension
 {
 

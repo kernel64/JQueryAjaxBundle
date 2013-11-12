@@ -1,5 +1,7 @@
 # JQueryAjaxBundle
-================
+------------------
+
+
 
 
 
@@ -9,7 +11,7 @@ This bundle add two Twig functions:
 
 
 ##1 - ja_request:
-------------------
+
 
 
   To generate a js code to send an ajax request:
@@ -30,7 +32,7 @@ This bundle add two Twig functions:
 ```
 
 ##2 - ja_link:
---------------
+
 
 
   To generate a link:

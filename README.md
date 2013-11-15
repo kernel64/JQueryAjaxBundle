@@ -41,6 +41,9 @@ This bundle add two Twig functions:
   {{ ja_link({'update': '#reponse', 'url': path('new'), 'text': 'new link'  }) }}
 ```
 
+  To add a confirm action on click, you just have to use 'confirm': true, by default the text is "Are you sure you want to perform this action?"
+  then if you want to replace it, use 'confirm_msg': "***".
+
   You can also use those parameters 'before' and 'after' to execute JS code.
 
  

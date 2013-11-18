@@ -46,4 +46,8 @@ This bundle add two Twig functions:
 
   You can also use those parameters 'before' and 'after' to execute JS code.
 
+
+##3 - License
+
+  This bundle is available under the [MIT license](LICENSE).
  

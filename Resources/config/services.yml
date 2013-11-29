@@ -1,6 +1,6 @@
 services:
     mabs_jquery_ajax.twig.jquery_ajax_extension:
-        class: Mabs\JqueryAjaxBundle\Twig\JqueryAjaxExtension
+        class: Mabs\JQueryAjaxBundle\Twig\JqueryAjaxExtension
         arguments: []
         tags:
             - { name: twig.extension }

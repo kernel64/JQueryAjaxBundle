@@ -8,17 +8,17 @@
 JQueryAjaxBundle for Symfony2.
 
 ## Install
+To install this bundle on your project, add this line to composer.json file:
 
-  
+```json
+   "mabs/jquery-ajax-bundle": "~1.0"
+```
 
 This bundle add two Twig functions:
 
 
 ##1 - ja_request:
 
-```json
-   require :  "mabs/jquery-ajax-bundle": "~1.0"
-```
 
   To generate a js code to send an ajax request:
   

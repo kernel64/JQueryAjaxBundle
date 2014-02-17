@@ -52,7 +52,14 @@ class JqueryAjaxExtension extends \Twig_Extension
                 $js .= $after;
             }
             
-            $js .= "}});";
+            $js .= "}";
+            
+            if (isset($options['complete'])) {
+                $complete = str_replace('"', "'", $options['complete']);
+                $js .= ",complete: function(){" . $complete . "},";
+            }
+            
+            $js .= "});";
             
             return $js;
         };

@@ -29,7 +29,7 @@ This bundle add two Twig functions:
   or
   
 ```twig
-{{ ja_request({'update': '#reponse', 'url': path('new'), 'after': 'alert("after");', 'before': 'alert("before");'  }) }}
+{{ ja_request({'update': '#reponse', 'url': path('new'), 'after': 'alert("after");', 'before': 'alert("before");', 'complete': 'alert("complete");'  }) }}
 ```
   
   =>

@@ -17,6 +17,11 @@ class JqueryAjaxExtension extends \Twig_Extension
                     'html'
                 )
             )),
+            new \Twig_SimpleFunction('ja_submit', $this->submitTag(), array(
+                'is_safe' => array(
+                    'html'
+                )
+            )),
             new \Twig_SimpleFunction('ja_link', $this->linkTag(), array(
                 'is_safe' => array(
                     'html'
@@ -64,6 +69,41 @@ class JqueryAjaxExtension extends \Twig_Extension
             return $js;
         };
     }
+    
+     /**
+     * Generate Js function to send ajax form data.
+     *
+     * @param array $options            
+     */
+    public function submitCall($options = array())
+    {
+    	return function ($options) {
+    		$type = isset($options['type']) ? $options['type'] : "POST";
+    		$dataType = isset($options['dataType']) ? $options['dataType'] : "html";
+    		$js = "$.ajax({
+		    		url: '" . $options['url'] . "',
+		    		type: '" . $type . "',
+		    		data: $(this.form.elements).serializeArray(),
+		    		dataType: '" . $dataType . "',";
+    		if (isset($options['before'])) {
+    			$before = str_replace('"', "'", $options['before']);
+    			$js .= "beforeSend: function(){" . $before . "},";
+    		}
+    		$js .= "success: function( data ){";
+    		if (isset($options['success'])) {
+    			$success = str_replace('"', "'", $options['success']);
+    			$js .= $success ;
+    		}
+    		if (isset($options['after'])) {
+    			$after = str_replace('"', "'", $options['after']);
+    			$js .= $after;
+    		}
+    
+    		$js .= "}});";
+    
+    		return $js;
+    	};
+    }
 
     /**
      * Generate link tag with js function to send ajax request
@@ -94,6 +134,36 @@ class JqueryAjaxExtension extends \Twig_Extension
             
             return $html;
         };
+    }
+    
+     /**
+     * Generate submit button tag with js function to send ajax form
+     *
+     * @param array $options
+     */
+    public function submitTag($options = array())
+    {
+    	$jsSubmit = $this->submitCall();
+    
+    	return function ($options) use($jsSubmit)
+    	{
+    		$confirm = '';
+    		if (isset($options['confirm']) && $options['confirm'] == true) {
+    
+    			$msg = "Are you sure you want to perform this action?";
+    			if(isset($options['confirm_msg'])) {
+    				$msg = htmlentities(str_replace("'", '"', $options['confirm_msg']), ENT_QUOTES);
+    			}
+    			$confirm .= "if(confirm('".$msg."'))" ;
+    		}
+    		$html = '<button class="' . (isset($options['class']) ? $options['class'] : "") . '"
+    		id="' . (isset($options['id']) ? $options['id'] : "") . '"
+    		onclick="' .$confirm. call_user_func($jsSubmit, $options) . 'return false;">';
+    		$html .= $options['text'];
+    		$html .= '</button>';
+    
+    		return $html;
+    	};
     }
 
     /**

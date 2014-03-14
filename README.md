@@ -2,7 +2,7 @@
 ------------------
 
 
-develop: [![Build Status](https://travis-ci.org/KnpLabs/KnpRadBundle.png?branch=develop)](https://travis-ci.org/kernel64/JQueryAjaxBundle)
+[![Build Status](https://travis-ci.org/kernel64/JQueryAjaxBundle.png?branch=master)](https://travis-ci.org/kernel64/JQueryAjaxBundle)
 
 
 JQueryAjaxBundle for Symfony2.

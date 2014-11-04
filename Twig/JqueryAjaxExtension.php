@@ -117,7 +117,7 @@ class JqueryAjaxExtension extends \Twig_Extension
         return function ($options) use($jsRequest)
         {
             $confirm = '';
-            if (isset($options['confirm']) && $options['confirm'] == true) {
+            if (isset($options['confirm']) && $options['confirm'] === true) {
                 
                 $msg = "Are you sure you want to perform this action?";
                 if(isset($options['confirm_msg'])) {
@@ -148,7 +148,7 @@ class JqueryAjaxExtension extends \Twig_Extension
     	return function ($options) use($jsSubmit)
     	{
     		$confirm = '';
-    		if (isset($options['confirm']) && $options['confirm'] == true) {
+    		if (isset($options['confirm']) && $options['confirm'] === true) {
     
     			$msg = "Are you sure you want to perform this action?";
     			if(isset($options['confirm_msg'])) {
@@ -176,3 +176,4 @@ class JqueryAjaxExtension extends \Twig_Extension
         return 'mabs_jquery_ajax';
     }
 }
+

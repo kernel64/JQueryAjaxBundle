@@ -1,8 +1,7 @@
 # JQueryAjaxBundle 
 ------------------
 
-
-[![Build Status](https://travis-ci.org/kernel64/JQueryAjaxBundle.png?branch=master)](https://travis-ci.org/kernel64/JQueryAjaxBundle)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05/small.png)](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05)
 
 
 JQueryAjaxBundle for Symfony2.

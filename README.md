@@ -1,7 +1,7 @@
-# JQueryAjaxBundle 
+# JQueryAjaxBundle  [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05/small.png)](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05)
 ------------------
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05/small.png)](https://insight.sensiolabs.com/projects/a735dceb-683c-4195-bd27-af676ca50a05)
+[![Build Status](https://travis-ci.org/KnpLabs/KnpRadBundle.png?branch=develop)](https://travis-ci.org/kernel64/JQueryAjaxBundle)
 
 
 JQueryAjaxBundle for Symfony2.

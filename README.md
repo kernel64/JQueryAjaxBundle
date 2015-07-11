@@ -2,7 +2,9 @@
 ------------------
 
 [![Build Status](https://travis-ci.org/KnpLabs/KnpRadBundle.png?branch=develop)](https://travis-ci.org/kernel64/JQueryAjaxBundle)  [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kernel64/JQueryAjaxBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kernel64/JQueryAjaxBundle/?branch=master)
-
+[![GitHub issues](https://img.shields.io/github/issues/kernel64/JQueryAjaxBundle.svg)](https://github.com/kernel64/JQueryAjaxBundle/issues)
+[![GitHub stars](https://img.shields.io/github/stars/kernel64/JQueryAjaxBundle.svg)](https://github.com/kernel64/JQueryAjaxBundle/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kernel64/JQueryAjaxBundle/master/LICENSE)
 
 JQueryAjaxBundle for Symfony2.
 
